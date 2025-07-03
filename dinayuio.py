@@ -148,7 +148,7 @@ turtle.onkeypress(enter_position, "space")
 screen.mainloop()
 turtle.done()
 
-print(250)
+print('GitHub')
 
 
 
