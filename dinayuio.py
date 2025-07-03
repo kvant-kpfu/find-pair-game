@@ -150,40 +150,6 @@ turtle.done()
 
 print('GitHub')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''hello world'''
 
 
