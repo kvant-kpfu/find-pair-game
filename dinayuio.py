@@ -135,7 +135,6 @@ def proverka():
     if cards[opened_cards[0]].color() == cards[opened_cards[1]].color():
         pass
     else:
-        time.sleep(1)
         for i in opened_cards:
             cards_layer[i].showturtle()
     opened_cards.clear()
@@ -149,9 +148,7 @@ turtle.onkeypress(enter_position, "space")
 screen.mainloop()
 turtle.done()
 
-
-
-
+print(215)
 
 
 
