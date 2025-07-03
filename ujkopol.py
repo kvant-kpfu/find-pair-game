@@ -149,5 +149,7 @@ turtle.onkeypress(move_up, "Up")
 turtle.onkeypress(move_left, "Left")
 turtle.onkeypress(enter_position, "space")
 
+
+
 screen.mainloop()
 turtle.done()
