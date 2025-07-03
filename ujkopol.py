@@ -129,6 +129,7 @@ def enter_position():
         check_win()
         is_space_pressed = False
 
+
 def proverka():
     global opened_cards, cards_layer
     if cards[opened_cards[0]].color() == cards[opened_cards[1]].color():
@@ -138,6 +139,7 @@ def proverka():
         for i in opened_cards:
             cards_layer[i].showturtle()
     opened_cards.clear()
+
 
 turtle.onkeypress(move_right, "Right")
 turtle.onkeypress(move_down, "Down")
