@@ -130,6 +130,7 @@ def enter_position():
         is_space_pressed = False
 
 
+
 def proverka():
     global opened_cards, cards_layer
     if cards[opened_cards[0]].color() == cards[opened_cards[1]].color():
