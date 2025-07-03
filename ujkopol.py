@@ -142,6 +142,7 @@ def proverka():
     opened_cards.clear()
 
 
+
 turtle.onkeypress(move_right, "Right")
 turtle.onkeypress(move_down, "Down")
 turtle.onkeypress(move_up, "Up")
