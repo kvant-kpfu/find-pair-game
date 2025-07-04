@@ -11,6 +11,25 @@ screen.setup(width = 1.0, height = 1.0)
 canvas = screen.getcanvas()
 root = canvas.winfo_toplevel()
 root.overrideredirect(1)
+
+# --- Таймер ---
+timer_turtle = turtle.Turtle()
+timer_turtle.hideturtle()
+timer_turtle.penup()
+timer_turtle.goto(0, 400)
+timer_turtle.color('blue')
+start_time = time.time()
+timer_running = True
+timer_value = 0
+
+def update_timer():
+    global timer_value, timer_running
+    if timer_running:
+        timer_value = int(time.time() - start_time)
+        timer_turtle.clear()
+        timer_turtle.write(f"Время: {timer_value} сек", align="center", font=("Courier", 24, "bold"))
+        screen.ontimer(update_timer, 1000)
+
 colors = ['green', 'green', 'blue', 'red', 'pink', 'orange', 'lightblue',
           'purple', 'salmon', 'violet', 'blue', 'red', 'pink', 'orange',
           'lightblue', 'purple', 'salmon', 'violet']
@@ -39,26 +58,28 @@ spacingy = 260
 
 for vert in range(3):
     for gor in range(6):
-        x = gor * spacingx - 400
+        x = gor * spacingx - 375
         y = -vert * spacingy + 250
 
         cards.append(create_card(x, y, colors.pop()))
 
 for vert in range(3):
     for gor in range(6):
-        x = gor * spacingx - 400
+        x = gor * spacingx - 375
         y = -vert * spacingy + 250
         cards_layer.append(create_card(x, y, 'black'))
 
 cards_layer[0].color('darkgrey')
 
 def check_win():
+    global timer_running
     all_hidden = True
     for card in cards_layer:
         if card.isvisible():
             all_hidden = False
             break
     if all_hidden:
+        timer_running = False
         t.penup()
         t.goto(0, 350)
         t.color("red")
@@ -150,5 +171,6 @@ turtle.onkeypress(move_up, "Up")
 turtle.onkeypress(move_left, "Left")
 turtle.onkeypress(enter_position, "space")
 
+update_timer()
 screen.mainloop()
 turtle.done()
