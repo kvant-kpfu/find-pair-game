@@ -21,8 +21,6 @@ is_space_pressed = False
 def create_card(x, y, color):
     card = turtle.Turtle()
     card.penup()
-
-
     card.goto(x,y)
     card.shape('square')
     card.shapesize(stretch_wid=10, stretch_len=6)
@@ -74,7 +72,6 @@ def move_right():
         card_layer_index += 1
         while card_layer_index < 17 and not cards_layer[card_layer_index].isvisible():
             card_layer_index += 1
-
     cards_layer[card_layer_index].color('darkgrey')
 
 def move_left():
@@ -147,9 +144,4 @@ turtle.onkeypress(enter_position, "space")
 
 screen.mainloop()
 turtle.done()
-
-print('GitHub')
-
-'''hello world'''
-
 
