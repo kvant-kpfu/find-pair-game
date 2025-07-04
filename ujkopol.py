@@ -39,14 +39,15 @@ spacingy = 260
 
 for vert in range(3):
     for gor in range(6):
-        x = gor * spacingx - 300
-        y = -vert * spacingy + 200
+        x = gor * spacingx - 400
+        y = -vert * spacingy + 250
+
         cards.append(create_card(x, y, colors.pop()))
 
 for vert in range(3):
     for gor in range(6):
-        x = gor * spacingx - 300
-        y = -vert * spacingy + 200
+        x = gor * spacingx - 400
+        y = -vert * spacingy + 250
         cards_layer.append(create_card(x, y, 'black'))
 
 cards_layer[0].color('darkgrey')
@@ -148,8 +149,6 @@ turtle.onkeypress(move_down, "Down")
 turtle.onkeypress(move_up, "Up")
 turtle.onkeypress(move_left, "Left")
 turtle.onkeypress(enter_position, "space")
-
-
 
 screen.mainloop()
 turtle.done()
